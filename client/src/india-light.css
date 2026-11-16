@@ -1,0 +1,387 @@
+/* Light surfaces and red interaction states across the India prototype. */
+:root:has(.india-shell) { color-scheme: light; background: #fff; }
+.dashboard.india-shell {
+    color-scheme: light;
+    --surface: #fff;
+    --surface-raised: #faf8f8;
+    --surface-hover: #fcebed;
+    --control-border: #e5dcde;
+    --text-main: #241d1f;
+    --text-muted: #6f6265;
+    --edge: #ebe3e5;
+    --logo-red: #c32036;
+    --red: var(--logo-red);
+    --red-hover: #94112d;
+    --red-soft: #fcebee;
+    background: var(--surface);
+    color: var(--text-main);
+}
+.india-shell :is(button,a,input,textarea,select,summary):focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.india-shell :is(.home-sidebar,.india-mobile-heading,.guide-sticky,.guide-detail-panel,.place-panel-body,.india-assistant,.place-photo-viewer) {
+    background: var(--surface);
+    color: var(--text-main);
+    border-color: var(--edge);
+}
+.india-shell .home-sidebar nav .india-current { color: var(--red); background: var(--red-soft); box-shadow: inset 0 0 0 1px #f2cbd3; }
+.india-shell .home-sidebar nav button:disabled { color: #73676a; opacity: .75; }
+.india-shell :is(.india-rail-arrow,.round-button,.home-new) { background: var(--surface-raised); color: var(--red); }
+.india-shell :is(.india-pill,.india-map-controls button,.india-day-heading button,.guide-map-utilities > button,.place-panel-header > button) {
+    background: var(--surface);
+    border-color: var(--control-border);
+    color: var(--red);
+}
+.india-shell :is(.india-pill,.india-map-controls button,.india-day-heading button,.guide-map-utilities > button,.place-panel-header > button,.guide-sticky-top > button,.guide-place-filters button):hover {
+    background: var(--red-soft);
+    color: var(--red-hover);
+}
+.india-shell :is(.home-primary,.button-primary,.dashboard-new,.india-chat-input button,.send-button) { background: var(--red); color: #fff; }
+.india-shell :is(.home-primary,.button-primary,.dashboard-new,.india-chat-input button,.send-button):hover:not(:disabled) { background: var(--red-hover); color: #fff; }
+.india-shell :is(.workspace-tabs button,.workspace-tabs a) { color: var(--text-muted); }
+.india-shell :is(.workspace-tabs button,.workspace-tabs a).current { color: var(--red); border-bottom-color: var(--red); }
+.india-shell :is(.india-map-controls button,.india-day-heading button,.guide-place-filters button,.guide-map-style button)[aria-pressed=true] {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+}
+.india-shell :is(.workspace-search input,.india-chat-input,.guide-composer,.assistant-model-bar,.assistant-composer) {
+    background: var(--surface-raised);
+    color: var(--text-main);
+    border-color: var(--control-border);
+}
+.india-shell :is(input,textarea)::placeholder { color: #776c70; }
+.india-shell .india-chat-input input { background: transparent; color: var(--text-main); }
+.india-shell :is(.india-home-intro,.india-home-tools,.inspiration-card p,.india-day-label,.india-day li span,.india-day li small,.india-places small,.student-budget p,.student-stay small,.student-meal small,.student-form-tip,.student-form-picks,.guide-place-copy .guide-place-meta,.place-panel-title p,.place-panel-body p,.place-guide-link small,.place-related-stop small,.guide-category-popover small,.featured-place-name + p) {
+    color: var(--text-muted);
+}
+.india-shell .inspiration-card .student-card-note { color: var(--red) !important; }
+.india-shell :is(.india-day h2,.india-day h3,.india-guide-notes h2,.india-places h2,.places-day-number,.india-transfer strong) { color: var(--text-main); }
+.india-shell :is(.student-budget,.student-meal,.student-form-picks,.sample-review,.meal-review,.india-transfer,.provider-choice.active,.provider-custom,.assistant-model-bar,.india-assistant .assistant-blank button,.india-assistant .chat-bubble.user) {
+    background: var(--surface-raised);
+    color: var(--text-main);
+    border-color: var(--control-border);
+}
+.india-shell .student-meal:hover { background: var(--red-soft); }
+.india-shell :is(.sample-review span,.meal-review summary) { color: var(--red); }
+.india-shell :is(.guide-place-shortcuts,.guide-context > section,.guide-place-card,.india-day,.india-day li,.india-day ol,.india-optional,.guide-sticky-top,.guide-sticky .workspace-tabs,.place-panel-header,.place-panel-tabs,.place-related-stop,.guide-planner-bar) {
+    border-color: var(--edge);
+}
+.india-shell :is(.india-optional p,.india-day li p,.india-assistant .assistant-context,.india-assistant .assistant-blank p,.india-assistant .assistant-composer span) { color: var(--text-muted); }
+.india-shell :is(.guide-share,.guide-share-status,.sticky-guide-menu,.sticky-link-status,.guide-category-popover,.india-contents,.guide-map-style) {
+    background: var(--surface);
+    color: var(--text-main);
+    border-color: var(--control-border);
+    box-shadow: 0 12px 28px #4c15231c;
+}
+.india-shell :is(.sticky-guide-menu,.guide-category-popover,.india-contents) button:hover { background: var(--red-soft); color: var(--red); }
+.india-shell :is(.guide-body a,.chat-markdown a) { color: var(--red); }
+.india-shell .discovery-count { background: var(--red); color: #fff; }
+.india-shell :is(.discovery-cover,.place-panel-gallery,.discovery-map) { background: #f4eeed; }
+.india-shell .guide-hero::after { background: linear-gradient(180deg,transparent 30%,#fff2 51%,#fffffff5 92%,#fff 100%); }
+.india-shell .guide-heading h1,.india-shell .guide-heading .guide-location,.india-shell .guide-heading .guide-byline { color: #fff; }
+.india-shell .guide-byline span { background: var(--red); color: #fff; }.india-shell .guide-byline i { background: #b99fa5; }
+.india-shell :is(.guide-toolbar button,.guide-photo-arrow) { color: var(--red); background: #fffffff2; border: 1px solid #e7dfe1; }
+.india-shell :is(.guide-toolbar button,.guide-photo-arrow):hover { color: var(--red-hover); background: #fff; }
+.india-shell .guide-photo-dots button::after { background: #c58493; }
+.india-shell .guide-photo-dots button[aria-pressed=true]::after { background: var(--red); }
+.india-shell .india-map-panel .leaflet-tile-pane { filter: invert(.94) sepia(.05) saturate(.52) contrast(.90) brightness(1.03); }
+.india-shell .india-map-panel.map-light .leaflet-tile-pane { filter: invert(.97) sepia(.03) saturate(.35) contrast(.72) brightness(1.1); }
+.india-shell :is(.leaflet-popup-content-wrapper,.leaflet-popup-tip,.leaflet-control-zoom a) { background: #fff; color: var(--text-main); }
+.india-shell .india-map-caption { background: #fffffff2; color: var(--text-muted); }
+.india-shell .itinerary-marker span { background: #fff; color: var(--red); }
+.india-shell .itinerary-food-marker span { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+.india-shell .sheet-backdrop { background: #3020255c; }
+.india-shell :is(.dashboard-sheet,.provider-sheet,.india-assistant,.place-photo-viewer) {
+    border-color: var(--control-border);
+    background: var(--surface);
+    color: var(--text-main);
+    box-shadow: 0 20px 60px #42162128;
+}
+.india-shell :is(.assistant-header h2,.assistant-blank h3,.india-assistant .chat-bubble p,.india-assistant .chat-markdown,.india-assistant .assistant-composer textarea) { color: var(--text-main); }
+.india-shell .india-assistant .assistant-context { border-color: var(--control-border); }
+.india-shell .india-assistant .send-button { background: var(--red); color: #fff; }
+.india-shell .chat-markdown :is(pre,code) { background: #f5f0f1; }
+.india-shell .chat-markdown th { background: var(--red-soft); }
+@media(max-width:700px) { .india-shell.india-show-map .india-map-panel { background: var(--surface); } }
+
+.guide-card-media { position: relative; overflow: hidden; margin: 0; border-radius: 12px; background: #f4eeed; }
+.guide-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.guide-card-media figcaption { position: absolute; bottom: 6px; left: 6px; right: 6px; padding: 4px 6px; border-radius: 5px; background: #fffef9ed; color: #493a3f; font-size: 10px; line-height: 1.25; }
+.guide-place-card > .guide-card-media { flex: 0 0 31%; aspect-ratio: 1.08; height: fit-content; max-height: 250px; }
+.guide-place-card > .guide-card-media img { position: absolute; inset: 0; }
+.india-stop-details .guide-card-media { width: min(235px,100%); aspect-ratio: 1.28; margin: 4px 0 9px; }
+:is(.student-stay,.student-meal) { grid-template-columns: 100px minmax(0,1fr) auto; align-items: start; }
+:is(.student-stay,.student-meal) > .guide-card-media { grid-column: 1; grid-row: 1 / span 2; aspect-ratio: 1.12; }
+:is(.student-stay,.student-meal) > :is(strong,small) { grid-column: 2; }
+:is(.student-stay,.student-meal) > span,.student-meal > small:last-child { grid-column: 3; }
+.student-meal > span { grid-row: 1; }.student-meal > small:last-child { grid-row: 2; }
+.student-stay > span { grid-row: 1; }
+.place-panel-gallery:has(button:only-child) { display: block; }
+.place-panel-gallery button:only-child { width: 100%; height: 100%; }
+@media (min-width: 701px) {
+    .india-shell.india-detail.india-sidebar-collapsed .india-rail-arrow { top: 43px; left: 8px; width: 40px; height: 40px; border: 1px solid var(--control-border); }
+    .india-shell.india-detail.india-sidebar-collapsed .home-sidebar nav { justify-items: center; gap: 8px; margin-top: 53px; }
+    .india-shell.india-detail.india-sidebar-collapsed .home-sidebar nav :is(button,a) { display: grid; grid-template-columns: 1fr; place-items: center; width: 40px; height: 40px; border-radius: 50%; padding: 0; gap: 0; line-height: 0; }
+    .india-shell.india-detail.india-sidebar-collapsed .home-sidebar nav svg { grid-area: 1/1; }
+}
+@media (max-width: 700px) {
+    .guide-place-card > .guide-card-media { flex-basis: 34%; }
+    :is(.student-stay,.student-meal) { grid-template-columns: 76px minmax(0,1fr); }
+    :is(.student-stay,.student-meal) > .guide-card-media { grid-row: 1 / span 4; }
+    :is(.student-stay,.student-meal) > span,.student-meal > small:last-child { grid-column: 2; grid-row: auto; text-align: left; }
+}
+
+
+/* Reference card proportions. The white and red palette remains shared. */
+.reference-place-card.guide-place-card { display: grid; grid-template-columns: minmax(0,32%) minmax(0,1fr); gap: 22px; align-items: start; padding: 17px 0; border: 0; }
+.reference-place-card .place-card-image { position: relative; isolation: isolate; width: 100%; aspect-ratio: 1.06; border-radius: 16px; overflow: hidden; background: #f2edef; }
+.place-card-open { display: block; width: 100%; height: 100%; padding: 0; }
+.reference-place-card .place-card-open img { display: block; width: 100%; height: 100%; border-radius: 0; object-fit: cover; }
+.place-card-photo-actions { position: absolute; top: 10px; right: 10px; display: flex; gap: 6px; }
+.reference-place-card .place-card-photo-actions button { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: #fff9; color: #86132d; font-size: 20px; line-height: 1; }
+.reference-place-card .place-card-photo-actions button:hover,.reference-place-card .place-card-photo-actions button[aria-pressed=true] { color: #fff; background: var(--red); }
+.place-card-photo-credit { position: absolute; bottom: 7px; left: 7px; max-width: calc(100% - 14px); padding: 3px 5px; border-radius: 4px; background: #fffef7ed; color: #50454a; font-size: 10px; pointer-events: none; }
+.reference-place-card .guide-place-copy { padding-top: 10px; border-top: 1px solid var(--edge); }
+.reference-place-card .guide-place-copy h4 { margin: 0 0 4px; font-size: clamp(17px,2vw,22px); font-weight: 600; line-height: 1.24; }
+.reference-place-card .guide-place-copy p { margin: 0 0 10px; }
+.reference-place-card .guide-place-copy .place-tip-heading { margin-top: 14px; margin-bottom: 4px; }
+.place-card-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.reference-place-card .place-card-actions button { display: inline-flex; align-items: center; width: auto; border: 1px solid var(--control-border); padding: 6px 12px; }
+.india-places .reference-place-card button.place-card-open { display: block; padding: 0; height: 100%; }
+@media(max-width: 700px) {
+    .reference-place-card.guide-place-card { gap: 11px; grid-template-columns: minmax(0,36%) minmax(0,1fr); }
+    .place-card-photo-actions { top: 5px; right: 5px; gap: 3px; }
+    .reference-place-card .place-card-photo-actions button { width: 24px; height: 24px; font-size: 16px; }
+}
+
+.india-shell .mmt-brand { display: inline-flex; align-items: center; gap: 2px; color: #12304e; font-size: 19px; font-weight: 700; letter-spacing: -.055em; }
+.india-shell .mmt-brand em { display: inline-grid; place-items: center; padding: 0 4px 2px; border-radius: 5px; background: var(--red); color: #fff; font-family: Georgia,serif; font-size: 21px; font-weight: 700; line-height: 1.05; }
+.india-shell .home-sidebar .mmt-brand span { display: none; }
+.india-shell.india-detail:not(.india-sidebar-collapsed) .home-sidebar .mmt-brand span { display: inline; }
+.india-shell .home-sidebar nav button:disabled { color: #584d50; opacity: 1; }
+.india-shell .guide-hero::after { background: linear-gradient(180deg,transparent 45%,#0002 60%,#0009 78%,#000c 100%); }
+.india-shell .guide-heading :is(h1,p) { text-shadow: 0 1px 4px #000b; }
+.india-map-caption { display: grid; gap: 4px; }
+.map-day-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.map-day-legend span { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
+.map-day-legend i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.map-day-0 { color: #ab183a; }.map-day-1 { color: #1459a0; }.map-day-2 { color: #137556; }
+.india-shell .itinerary-marker span { border-color: var(--marker); background: var(--marker); color: white; box-shadow: 0 0 0 2px #fff; }
+
+.replace-stop-help { margin: -5px 0 13px; color: var(--text-muted); font-size: 12px; }
+
+.india-shell .home-sidebar .mmt-brand {
+    align-self: flex-start;
+    min-height: 31px;
+    padding: 0 6px;
+    overflow: visible;
+}
+.india-shell .mmt-brand em {
+    flex: 0 0 auto;
+    min-width: 35px;
+    min-height: 25px;
+    padding: 1px 4px 3px;
+    line-height: 1.1;
+    white-space: nowrap;
+    letter-spacing: -.035em;
+}
+.india-shell:not(.india-detail) .home-sidebar .mmt-brand,
+.india-shell.india-sidebar-collapsed .home-sidebar .mmt-brand {
+    width: 40px;
+    max-width: 100%;
+    padding: 0;
+    justify-content: center;
+}
+@media (min-width: 701px) {
+    .india-shell .home-sidebar { overflow-x: hidden; }
+    .india-shell:not(.india-detail) .home-sidebar,
+    .india-shell.india-sidebar-collapsed .home-sidebar { padding-inline: 6px; }
+}
+.guide-heading .guide-trip-preferences { display: inline-block; margin: 9px 0 0; padding: 4px 9px; border-radius: 999px; background: #fff; color: var(--red); font-size: 12px; text-shadow: none; }
+.guide-heading .guide-trip-preferences + .home-primary { display: block; }
+.chat-intake { width: min(534px,100%); margin: auto; padding: 30px 24px; overflow: auto; }
+.india-assistant:has(.chat-intake) { display: flex; flex-direction: column; height: auto; min-height: min(350px,calc(100dvh - 32px)); max-height: calc(100dvh - 32px); }
+.chat-intake h2 { font-size: 23px; font-weight: 650; }
+.chat-intake-step,.chat-intake-answer { margin: 5px 0 12px; color: var(--text-muted); font-size: 13px; }
+.chat-intake-question { display: block; margin-block: 8px 13px; font-weight: 600; }
+.chat-intake-question input { display: block; margin-top: 9px; width: min(165px,100%); background: var(--surface-raised); border-color: var(--control-border); color: var(--text-main); }
+.chat-intake-options,.chat-intake-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.chat-intake-options button[aria-pressed=true] { background: var(--red-soft); border-color: var(--red); }
+
+.home-trip-chat { margin-top: 20px; border-radius: 15px; }
+.home-chat-reveal { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 320ms ease,opacity 240ms ease; }
+.home-chat-clip { min-height: 0; overflow: hidden; }
+.home-trip-chat.is-open { border: 1px solid var(--control-border); background: #fff; }
+.home-trip-chat.is-open .home-chat-reveal { grid-template-rows: 1fr; opacity: 1; }
+.home-trip-chat .home-trip-composer { margin-top: 0; }
+.home-trip-chat.is-open .home-trip-composer { margin: 9px 14px 14px; }
+.home-trip-chat-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid var(--edge); }
+.home-trip-thread { height: clamp(245px,42dvh,500px); overflow: auto; overscroll-behavior: contain; padding: 16px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; scrollbar-width: thin; }
+.home-trip-message { max-width: min(600px,90%); padding: 9px 12px; border-radius: 12px; background: var(--surface-raised); color: var(--text-main); overflow-wrap: anywhere; }
+.home-trip-message.user { align-self: flex-end; background: var(--red-soft); color: #72132a; }
+.home-trip-choices { display: flex; flex-wrap: wrap; gap: 7px; }
+.home-trip-dates { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; }
+.home-trip-dates label { display: grid; gap: 3px; color: var(--text-muted); font-size: 12px; }
+.home-trip-dates input { min-height: 40px; padding: 7px 10px; border-color: var(--control-border); background: var(--surface-raised); color: var(--text-main); }
+.home-trip-link { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 0; width: auto; padding: 0 14px; font-size: 13px; }
+.home-trip-error { color: var(--red); font-size: 13px; }
+.home-trip-chat.is-open ~ .india-guide-search,.home-trip-chat.is-open ~ .india-grid { animation: home-planning-down 320ms ease both; }
+@keyframes home-planning-down { from { translate: 0 -10px; } to { translate: 0 0; } }
+@media(prefers-reduced-motion:reduce) { .home-chat-reveal,.home-trip-chat.is-open ~ * { animation: none; transition: none; } }
+
+/* The conversation uses the main page and keeps the composer below the latest question. */
+.home-trip-chat.is-open { border: 0; border-radius: 0; }
+.home-trip-chat-header { padding-inline: 10px; border-bottom-color: #f1e9eb; }
+.home-trip-thread { height: clamp(300px,calc(100dvh - 245px),790px); padding: 12px 10px 18px; }
+.home-trip-thread > * { flex-shrink: 0; }
+.home-trip-thread > :first-child { margin-top: auto; }
+.home-trip-chat.is-open .home-trip-composer { margin: 0 0 23px; }
+.india-shell .home-chat-start { min-width: 0; width: auto; }
+.india-shell :is(.home-typewriter,.india-home-intro,.home-trip-chat,.india-guide-search,.india-list > h2,.india-grid .inspiration-card,.guide-trip-preferences,.guide-introduction,.groq-reply,.student-budget,.guide-chat-options,.guide-stop-editor) {
+    font-family: 'Montserrat Variable', sans-serif;
+}
+.india-shell .home-trip-composer { gap: 8px; }
+.india-shell .home-trip-composer input:focus-visible { outline: none; box-shadow: none; }
+.india-shell .home-trip-composer:focus-within { outline: 2px solid var(--red); outline-offset: 2px; }
+.home-chat-actions { margin: 0 0 12px; }
+.india-shell .home-chat-actions .home-trip-link { min-width: 0; max-width: 100%; white-space: normal; text-align: center; }
+@media(max-width:700px) { .home-trip-thread { height: clamp(260px,calc(100dvh - 285px),540px); } }
+
+.guide-edit-chat { position: fixed; left: calc(var(--rail) + (100vw - var(--rail))/4); bottom: 16px; z-index: 9; width: min(700px,calc((100vw - var(--rail))/2 - 44px)); transform: translateX(-50%); }
+.guide-edit-chat .guide-composer { position: static; width: 100%; transform: none; }
+.guide-chat-options { max-height: 45dvh; overflow: auto; margin-bottom: 8px; padding: 11px 14px; border-radius: 15px; border: 1px solid var(--control-border); background: var(--surface); box-shadow: 0 8px 26px #42162124; }
+.guide-chat-options header { display: flex; align-items: center; justify-content: space-between; gap: 9px; }
+.guide-chat-options p { margin: 7px 0 10px; }
+.guide-chat-back { margin-top: 9px; color: var(--red); font-size: 13px; }
+.guide-chat-confirmation { border-radius: 8px; padding: 7px 9px; background: var(--red-soft); color: var(--red-hover); }
+@media(max-width:700px) {
+    .guide-edit-chat { left: 50%; width: calc(100% - 32px); }
+    .india-show-map .guide-edit-chat { display: none; }
+}
+
+.home-trip-message,.groq-reply { white-space: pre-wrap; }
+.groq-setup { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; }
+.groq-setup label { display: grid; min-width: min(230px,100%); gap: 4px; color: var(--text-muted); font-size: 13px; }
+.groq-setup input { border-color: var(--control-border); background: var(--surface-raised); color: var(--text-main); }
+
+/* Keep the cover photographic, with only the essential overlays. */
+.india-guide .guide-toolbar { justify-content: space-between; }
+.india-guide .guide-toolbar .cover-contents-toggle,.guide-sticky-top button[aria-label="Guide sections"] { display: grid; place-items: center; padding: 0; }
+.india-guide .guide-toolbar .cover-contents-toggle { width: 32px; height: 32px; background: #171717e8; border: 0; color: #fff; }
+.india-guide .guide-toolbar .cover-contents-toggle:hover { background: #080808; color: #fff; }
+.india-guide .india-contents { left: 26px; right: auto; }
+.india-guide .guide-hero { min-height: min(76dvh,720px); }
+.india-shell .india-guide .guide-hero::after { background: linear-gradient(180deg,transparent 35%,#0001 50%,#0008 73%,#000d 100%); }
+.india-guide .guide-heading { padding-bottom: clamp(38px,6vh,60px); }
+.india-shell .guide-heading .home-primary { color: #191416; background: #fff; }
+.india-shell .guide-heading .home-primary:hover:not(:disabled) { color: #191416; background: #f5eff0; }
+.india-guide .guide-heading h1 { max-width: 18ch; }
+.india-guide .guide-heading .guide-location { margin-top: 10px; }
+.guide-introduction .guide-trip-preferences { margin: 0 0 12px; color: var(--text-muted); font-size: 13px; }
+.india-guide .guide-hero .guide-photo-dots button::after { background: #fff8; }
+.india-guide .guide-hero .guide-photo-dots button[aria-pressed=true]::after { background: #fff; }
+@media (hover:hover) {
+    .guide-hero > .guide-photo-arrow,.guide-hero > .guide-photo-dots { opacity: 0; transition: opacity 150ms ease; }
+    .guide-hero:hover > .guide-photo-arrow,.guide-hero:hover > .guide-photo-dots,.guide-hero:focus-within > .guide-photo-arrow,.guide-hero:focus-within > .guide-photo-dots { opacity: 1; }
+}
+@media (max-width:700px) {
+    .india-guide .guide-hero { min-height: 370px; }
+    .india-guide .india-contents { left: 10px; }
+    .india-guide .guide-heading { padding-bottom: 32px; }
+}
+
+.personalized-day-note { padding: 9px 11px; border: 1px solid var(--control-border); border-radius: 9px; background: var(--surface-raised); color: var(--text-main); font-size: 13px; }
+
+.home-typewriter { display: grid; }
+.home-typewriter > span { grid-area: 1 / 1; }
+.home-typewriter-sizer { visibility: hidden; }
+.home-typewriter-cursor { display: inline-block; width: 2px; height: .89em; margin-inline-start: 3px; vertical-align: -.06em; background: var(--red); animation: home-cursor-blink 720ms steps(1,end) infinite; }
+@keyframes home-cursor-blink { 50% { opacity: 0; } }
+@media(prefers-reduced-motion:reduce) { .home-typewriter-cursor { animation: none; } }
+
+/* Motion follows the active surface and respects the system motion preference. */
+@view-transition { navigation: auto; }
+@keyframes india-enter { from { opacity: 0; transform: translateY(11px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes india-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes india-panel-in { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes india-dialog-in { from { opacity: 0; transform: translateY(9px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@media(prefers-reduced-motion:no-preference) {
+    ::view-transition-old(root) { animation-duration: 160ms; }
+    ::view-transition-new(root) { animation-duration: 240ms; }
+    .india-grid .discovery-cover { transition: transform 220ms ease,box-shadow 220ms ease; }
+    .india-grid .discovery-cover:hover,.india-grid .discovery-cover:focus-within { transform: translateY(-3px); box-shadow: 0 9px 22px #32121c24; }
+    .india-shell :is(.india-pill,.home-primary,.button-primary,.round-button,.guide-photo-arrow,.cover-contents-toggle) { transition: background-color 160ms ease,border-color 160ms ease,color 160ms ease,transform 160ms ease; }
+    .india-shell :is(.india-pill,.home-primary,.button-primary,.round-button,.guide-photo-arrow,.cover-contents-toggle):active:not(:disabled) { transform: scale(.96); }
+    .india-guide .guide-heading { animation: india-enter 350ms ease-out both; }
+    .india-guide :is(.guide-introduction,.india-places,.guide-category-popover,.guide-chat-options,.india-contents,.home-trip-message,.home-trip-choices) { animation: india-enter 230ms ease-out both; }
+    .india-guide .guide-detail-panel { animation: india-panel-in 260ms cubic-bezier(.22,.72,.24,1) both; }
+    .india-shell .sheet-backdrop { animation: india-fade 170ms ease both; }
+    .india-shell .sheet-backdrop > section { animation: india-dialog-in 230ms ease-out both; }
+}
+@media(prefers-reduced-motion:reduce) {
+    ::view-transition-old(root),::view-transition-new(root) { animation: none; }
+    .india-shell :is(.india-guide,.home-sidebar,.discovery-cover img,.guide-photo-arrow,.guide-photo-dots) { transition: none; }
+}
+
+.india-shell .india-list {
+    max-width: 1320px;
+    padding-top: clamp(24px, 4vw, 58px);
+    padding-bottom: 60px;
+}
+.trip-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    border-radius: 28px;
+    overflow: hidden;
+    background: #f8eee6;
+    min-height: 410px;
+}
+.trip-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: clamp(26px, 5vw, 70px);
+}
+.india-shell .trip-hero .home-typewriter {
+    font-size: clamp(42px, 6.2vw, 88px);
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 1.04;
+    color: #30201d;
+}
+.trip-hero .india-home-intro {
+    max-width: 39ch;
+    margin-top: 20px;
+    color: #604a43;
+    font-size: 16px;
+    line-height: 1.65;
+}
+.trip-hero .home-trip-chat { margin-top: 24px; }
+.trip-hero .home-trip-chat.is-open { padding: 12px; border-radius: 16px; }
+.trip-hero .home-trip-chat.is-open .home-trip-composer { margin-bottom: 0; }
+.trip-hero .home-chat-start span { margin-inline-start: 8px; }
+.trip-hero-photo { position: relative; min-height: 100%; overflow: hidden; }
+.trip-hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 52%; }
+.trip-guide-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+    margin: 44px 0 22px;
+    font-family: 'Montserrat Variable', sans-serif;
+}
+.india-shell .trip-guide-heading h2 { margin: 0; font-size: clamp(22px, 2.8vw, 34px); letter-spacing: -.025em; }
+.india-list .trip-guide-heading .india-guide-search { width: min(320px, 100%); margin: 0; }
+.india-list .india-grid { max-width: none; }
+.india-list .india-grid .discovery-cover { aspect-ratio: 4 / 3; }
+@media (max-width: 850px) {
+    .trip-hero { grid-template-columns: 1fr; min-height: 0; }
+    .trip-hero-photo { min-height: clamp(210px, 53vw, 360px); }
+    .trip-guide-heading { margin-top: 32px; }
+}
+@media (max-width: 520px) {
+    .trip-hero { border-radius: 18px; }
+    .india-list .india-grid { grid-template-columns: 1fr; }
+    .india-list .trip-guide-heading .india-guide-search { width: 100%; }
+}
